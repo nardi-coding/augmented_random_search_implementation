@@ -21,8 +21,7 @@ class Normalizer():
     def normalize(self, inputs):
         obs_mean = self.mean
         obs_std = np.sqrt(self.var)
-        std = self.mean.std()
-        return (inputs - obs_mean) / std
+        return (inputs - obs_mean) / obs_std
         
 class Hp():
 
